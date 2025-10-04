@@ -11,10 +11,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+import Header from "@/components/layout/Header";
+
 export default function Home() {
   return (
     <div>
-     <h1>Welcome to Alx-Project Setup 2</h1>
+     <Header/>
     </div>
   );
 }
