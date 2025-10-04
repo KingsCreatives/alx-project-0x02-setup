@@ -11,12 +11,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-import Header from "@/components/layout/Header";
+import HomePage from "./home";
 
 export default function Home() {
-  return (
-    <div>
-     <Header/>
-    </div>
-  );
+  return <HomePage/>
 }
