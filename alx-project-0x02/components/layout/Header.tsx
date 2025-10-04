@@ -11,9 +11,10 @@ const Header = () => {
    
       <nav>
         <ul className="flex space-x-6 text-white font-medium">
-          <li><Link href="/home">Home</Link></li>
-          <li><Link href="/about">About</Link></li>
-          <li><Link href="/posts">Posts</Link></li>
+          <li className='p-1 cursor-pointer'><Link href="/home">Home</Link></li>
+          <li className='p-1 cursor-pointer'><Link href="/about">About</Link></li>
+          <li className='p-1 cursor-pointer'><Link href="/posts">Post</Link></li>
+          <li className='p-1 cursor-pointer'><Link href="/users">Users</Link></li>
         </ul>
       </nav>
     </header>

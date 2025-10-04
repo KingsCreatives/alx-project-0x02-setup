@@ -11,6 +11,7 @@ export async function getPostsData(): Promise<PostProps[]> {
     const result: { id: number; userId: number; title: string; body: string }[] =
       await response.json()
 
+
     
     const data: PostProps[] = result.map((post) => ({
       id: post.id,
