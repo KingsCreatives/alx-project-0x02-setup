@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { ButtonProps } from '@/interfaces'
+import type { ButtonProps } from '@/interfaces'
 
 const Button = ({
   size = "medium",

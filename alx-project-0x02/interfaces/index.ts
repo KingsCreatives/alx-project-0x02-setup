@@ -7,7 +7,12 @@ export interface CardProps{
 
 export interface PostModalProps{
     onClose : ()=> void
-    onSubmit: (data: CardProps) => void
+    onSubmit: (data: PostProps) => void
+}
+
+export interface PostProps extends CardProps{
+  id: number
+  userId : number
 }
 
 export interface ButtonProps{

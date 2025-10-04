@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
-import { CardProps, PostModalProps} from "@/interfaces";
+import { PostModalProps, PostProps} from "@/interfaces";
 
 const PostModal: React.FC<PostModalProps> = ({onClose, onSubmit}) => {
-    const [post, setPost] = useState<CardProps>({
+    const [post, setPost] = useState<PostProps>({
+    id: 0,
+    userId: 0,    
     title : "",
     content: ""
     })
@@ -23,6 +25,28 @@ const PostModal: React.FC<PostModalProps> = ({onClose, onSubmit}) => {
         <div className="bg-white rounded-lg p-8 shadow-lg w-full max-w-md">
             <h2 className="text-2xl fonts-bold mb-4 text-gray-800">Add New Post</h2>
             <form onSubmit={handleSubmit}>
+                <div className="mb-4">
+                    <label htmlFor="id" className="block text-gray-700 font-medium mb-2">ID</label>
+                    <input 
+                    type="number"
+                    name="id" 
+                    value={post.id}
+                    id="id"
+                    onChange={handleChange}
+                    className="w-full text-black px-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                </div>
+                <div className="mb-4">
+                    <label htmlFor="userId" className="block text-gray-700 font-medium mb-2">User ID</label>
+                    <input 
+                    type="number"
+                    name="userId" 
+                    value={post.userId}
+                    id="userId"
+                    onChange={handleChange}
+                    className="w-full text-black px-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                </div>
                 <div className="mb-4">
                     <label htmlFor="title" className="block text-gray-700 font-medium mb-2">Title</label>
                     <input 
